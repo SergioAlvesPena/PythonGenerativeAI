@@ -1,9 +1,9 @@
-from openai import OpenAi
+from openai import OpenAI
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
-cliente = OpenAi(api_key=os.getenv("OPENAI_API_KEY"))
+cliente = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 resposta = cliente.chat.completions.create(
     messages=[
@@ -19,4 +19,4 @@ resposta = cliente.chat.completions.create(
     model= "gpt-4"
 )
 
-print(resposta)
+print(resposta.choices[0].message.content)
