@@ -169,7 +169,7 @@ def identificar_responsavel(perfil_usuario, lista_de_usuarios):
     conteudo = resposta.choices[0].message.content
     return conteudo
 
-lista_de_transacoes = carrega("transacoes.csv")
+lista_de_transacoes = carrega("curso_1_openai\\dados\\transacoes.csv")
 transacoes_analisadas = analisar_transacao(lista_de_transacoes)
 
 for uma_transacao in transacoes_analisadas["transacoes"]:
